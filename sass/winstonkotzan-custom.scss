@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(/assets/lobster14.otf);
+// You can also link to this by: <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+}
+
+html {
+  background: #b3b3b3 image-url('chicago-background.jpg') top left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background: none;
+  color: #FFFF66;
+}
+
+h1.title {
+  font-family: Lobster;
+  font-weight: normal;
+  font-size: 48px;
+}
+
+.home-page-navigation {
+  .main-photo {
+    position: absolute;
+    top:165px;
+    left: 125px;
+    text-align: center;
+    width: 324px;
+  }
+
+  .nav-icon {
+    position: absolute;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    width: 250px;
+
+    p {
+      font-size: 35px;
+      font-variant: small-caps;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px #000000;
+      position: absolute;
+      left: 70px;
+      top: 22px;
+    }
+    img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    .bubble {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width:65px;
+      heigh:65px;
+      opacity: 0.1;
+    }
+  }
+
+  .active {
+    color:#ffffff;
+    text-shadow:1px 0px 1px #555;
+    z-index: 100;
+  }
+
+  ul {
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    display:none;
+    list-style-type: none;
+  }
+
+  .about {
+    top: 150px;
+    left: 525px;
+  }
+  .blog {
+    top: 315px;
+    left: 625px;
+  }
+  .contact {
+    top: 480px;
+    left: 725px;
+    a.linkedin {
+      display: block;
+      position: absolute;
+      width:75px;
+      height:75px;
+      background:url(/images/socialmedia.png) no-repeat;
+      padding-right: 5px;
+    }
+    a.twitter {
+      display: block;
+      position: absolute;
+      width:75px;
+      height:75px;
+      background:url(/images/socialmedia.png) no-repeat;
+      background-position: -75px 0px;
+      padding-right: 5px;
+      left: 75px;
+    }
+    a.googleplus {
+      display: block;
+      position: absolute;
+      width:75px;
+      height:75px;
+      background:url(/images/socialmedia.png) no-repeat;
+      background-position: -151px 0px;
+      padding-right: 5px;
+      left: 150px;
+    }
+  }
+}
+
+.blog-navigation {
+  @extend .sans;
+  a {
+   text-decoration: none;
+   color: #FFFF66;
+  }
+  a:visited { color: #FFFF66; }
+  a:hover { color: #d58512; }
+}
+
+.blog-textarea {
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.blog-post {
+  @extend .sans;
+  font-size: 12pt;
+  color: #000000;
+}
