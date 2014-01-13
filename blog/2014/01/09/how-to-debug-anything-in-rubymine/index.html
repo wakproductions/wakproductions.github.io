@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Winston Kotzan's Blog - How to debug anything in RubyMine</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="canonical" href="http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/atom.xml" rel="alternate" title="Winston Kotzan's Blog" type="application/atom+xml">
+
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:500,700' rel='stylesheet' type='text/css'>
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+
+    <link rel="icon" href="http://www.winstonkotzan.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+    <h1 style="font-family: Lobster; margin-bottom: 10px;">Stocks, Programming, and Coffee</h1>
+    <h2>Winston Kotzan's Blog</h2>
+    <div class="blog-navigation">
+       <a href="/">Home</a> | <a href="/blog">Blog Archive</a> <a href="/atom.xml"><img class="blog-rss" src="/images/icon-rss.png" width="20" height="20"></a>
+    </div>
+</div>
+<div class="container blog-textarea blog-post">
+    <div>
+        <article class="hentry" role="article">
+            
+  <header>
+    
+      <h1 class="entry-title">
+
+          How to debug anything in RubyMine</h1>
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T14:19:59Z" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
+      </p>
+    
+    <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/" data-via="" data-counturl="http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+  </header>
+
+
+<div class="entry-content"><p>RubyMine has an excellent step-through debugger which lets you set breakpoints in your code and trace through the
+program. I use RubyMine’s debugger all the time and I find it to be an especially useful feature for exploring all of
+the metaprogramming going on behind the scenes in Ruby on Rails. To run the debugger, simply set up a configuration
+and hit the debug button on the toolbar. RubyMine will then launch the rails server in its own instance of the
+command terminal, which you can view in the output window at the bottom of the screen.</p>
+
+<p><img src="/resources/2014-01-09-how-to-debug-anything-in-rubymine/screen_layout.png" /></p>
+
+<div class="caption">
+Figure 1: RubyMine's trace debugger at work
+</div>
+
+<p>The debugger can only run by tying itself to a Ruby related command line program. In most cases this will be a call to
+<code>Rails server</code>.  Using the “Edit Configurations” dialog box, you can use the debugger on other Ruby related
+executables besides Rails such as Cucumber, RSpec, Rack, or IRB.</p>
+
+<p><img src="/resources/2014-01-09-how-to-debug-anything-in-rubymine/edit_configurations_dialog.png" /></p>
+
+<div class="caption">
+Figure 2: The "Edit Configurations" dialog box. Notice how it does not provide an option for you
+to run the debugger against an executable not on the list.
+</div>
+
+<p>But what if you want to use the debugger on a program not listed in the Edit Configurations box? For example, we might
+be writing a plugin for the Jekyll blogging engine, or we might want to learn more about the metaprogramming behind
+Nanoc. Alternative frameworks to Rails often have their own set of terminal commands for invoking the program. You might
+have to run it by calling <code>jekyll build</code> or <code>nanoc compile</code>.</p>
+
+<p>A simple hack for getting such programs to run in RubyMine’s debugger is to create a rake task which invokes the program
+for you. In this example, I want to set a breakpoint in Nanoc’s Rules file. Since this isn’t a default in Rubymine’s
+configuration, I can get around this limitation by calling Nanoc through a task in my Rakefile.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Rakefile </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="n">desc</span> <span class="s2">&quot;compile with nanoc&quot;</span>
+</span><span class="line"><span class="n">task</span> <span class="ss">:compile</span> <span class="k">do</span>
+</span><span class="line">  <span class="nb">system</span> <span class="s1">&#39;nanoc compile&#39;</span>
+</span><span class="line"><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Now I can debug nanoc’s compiler by creating a debug configuration in RubyMine and setting it to call the rake
+task I’ve created.</p>
+
+<p><img src="/resources/2014-01-09-how-to-debug-anything-in-rubymine/rake_configuration.png" /></p>
+
+<div class="caption">
+Figure 3: The configuration in RubyMine to call my Rake task.
+</div>
+
+<p><img src="/resources/2014-01-09-how-to-debug-anything-in-rubymine/debugging_nanoc.png" /></p>
+
+<div class="caption">
+Figure 4: The debugger stoped at a breakpoint after calling the Nanoc compiler.
+</div>
+
+<p>Sometimes Ruby can be a confusing language because of all its metaprogramming. At times it is difficult to tell what
+class an object might descend from, or which version of an overloaded method is getting called. RubyMine is an excellent
+tool for helping you decipher the code behind Ruby gems and better understand how they are designed.</p>
+</div>
+
+
+            <footer>
+                <p class="meta">
+                    
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Winston Kotzan</span></span>
+
+                    
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T14:19:59Z" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
+                    
+
+
+                </p>
+                
+                <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/" data-via="" data-counturl="http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+                
+                <p class="meta">
+                    
+                    <a class="basic-alignment left" href="/blog/2014/01/04/disruptive-innovation-levels-information-asymemetry-in-enterprise-software/" title="Previous Post: Disruptive Innovation Levels Information Asymmetry in Enterprise Software">&laquo; Disruptive Innovation Levels Information Asymmetry in Enterprise Software</a>
+                    
+                    
+                </p>
+            </footer>
+        </article>
+        
+        <section>
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite">
+                
+
+<script type="text/javascript">
+      var disqus_shortname = 'winstonkotzan';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/';
+        var disqus_url = 'http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+            </div>
+        </section>
+        
+    </div>
+    
+    <aside class="sidebar">
+        
+        
+        
+    </aside>
+    
+
+</div>
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-46648633-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+<!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-46648633-1', 'winstonkotzan.com');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
