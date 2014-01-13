@@ -132,6 +132,11 @@ h1.title {
   a:hover { color: #d58512; }
 }
 
+img.blog-rss {
+  vertical-align: top;
+  margin-top: 3px;
+}
+
 .blog-textarea {
   background-color: #ffffff;
   border-radius: 25px;
@@ -141,4 +146,10 @@ h1.title {
   @extend .sans;
   font-size: 12pt;
   color: #000000;
+}
+
+.caption {
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
+  font-weight:bold;
 }
