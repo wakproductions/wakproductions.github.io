@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Winston Kotzan's Blog]]></title>
-  <link href="http://www.winstonkotzan.com/atom.xml" rel="self"/>
-  <link href="http://www.winstonkotzan.com/"/>
-  <updated>2014-01-12T20:16:39-05:00</updated>
-  <id>http://www.winstonkotzan.com/</id>
+  <link href="http://winstonkotzan.com/atom.xml" rel="self"/>
+  <link href="http://winstonkotzan.com/"/>
+  <updated>2014-01-12T20:35:10-05:00</updated>
+  <id>http://winstonkotzan.com/</id>
   <author>
     <name><![CDATA[Winston Kotzan]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to debug anything in RubyMine]]></title>
-    <link href="http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/"/>
+    <link href="http://winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine/"/>
     <updated>2014-01-09T14:19:59Z</updated>
-    <id>http://www.winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine</id>
+    <id>http://winstonkotzan.com/blog/2014/01/09/how-to-debug-anything-in-rubymine</id>
     <content type="html"><![CDATA[<p>RubyMine has an excellent step-through debugger which lets you set breakpoints in your code and trace through the
 program. I use RubyMine’s debugger all the time and I find it to be an especially useful feature for exploring all of
 the metaprogramming going on behind the scenes in Ruby on Rails. To run the debugger, simply set up a configuration
@@ -84,9 +84,9 @@ tool for helping you decipher the code behind Ruby gems and better understand ho
   
   <entry>
     <title type="html"><![CDATA[Disruptive Innovation Levels Information Asymmetry in Enterprise Software]]></title>
-    <link href="http://www.winstonkotzan.com/blog/2014/01/04/disruptive-innovation-levels-information-asymemetry-in-enterprise-software/"/>
+    <link href="http://winstonkotzan.com/blog/2014/01/04/disruptive-innovation-levels-information-asymemetry-in-enterprise-software/"/>
     <updated>2014-01-04T05:26:55Z</updated>
-    <id>http://www.winstonkotzan.com/blog/2014/01/04/disruptive-innovation-levels-information-asymemetry-in-enterprise-software</id>
+    <id>http://winstonkotzan.com/blog/2014/01/04/disruptive-innovation-levels-information-asymemetry-in-enterprise-software</id>
     <content type="html"><![CDATA[<p>Selecting enterprise software is a daunting task that requires knowledge to make a good decision. A misguided outcome
 could cost your organization a great deal in implementation expenses and lost productivity.  Unfortunately, the
 information you may need to arrive at the right decision for your circumstance could be hard to find. Obscure product
