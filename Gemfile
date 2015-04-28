@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
-  gem 'rake', '~> 10.0'
+  gem 'rake', '~> 10'
   gem 'jekyll', '1.4.2'
   gem 'rdiscount', '~> 2.1.7'   # github-pages depends on rdiscount 1.6.8
   gem 'pygments.rb', '~> 0.5.0'

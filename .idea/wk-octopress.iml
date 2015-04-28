@@ -6,7 +6,6 @@
     <option name="importPaths">
       <list>
         <option value="$USER_HOME$/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/blueprint/stylesheets" />
-        <option value="$USER_HOME$/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.2.0.0/assets/stylesheets" />
         <option value="$USER_HOME$/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets" />
       </list>
     </option>
@@ -43,7 +42,7 @@
     <orderEntry type="library" scope="PROVIDED" name="pygments.rb (v0.5.4, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.1, rbenv: 2.0.0-p247) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.1, rbenv: 2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.9.3, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.9.3, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-kqueue (v0.2.0, rbenv: 2.0.0-p247) [gem]" level="application" />
@@ -58,7 +57,5 @@
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="toml (v0.1.0, rbenv: 2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yajl-ruby (v1.1.0, rbenv: 2.0.0-p247) [gem]" level="application" />
-    <orderEntry type="library" name="compass-library" level="project" />
   </component>
 </module>
-
