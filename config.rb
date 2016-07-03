@@ -37,3 +37,11 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+# See https://github.com/thoughtbot/proteus-middleman/wiki/Publishing-to-Github-Pages'-User-or-Organization-Pages
+# Whoops this is no longer supported in Middleman v4.0
+# activate :deploy do |deploy|
+#   deploy.build_before = true
+#   deploy.method = :git
+#   deploy.branch = 'master'
+# end
