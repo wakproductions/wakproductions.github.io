@@ -1,0 +1,222 @@
+@charset "utf-8";
+@import "normalize";
+//@import 'bootstrap.min';
+
+$text-color: #FFFF66;
+
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(/fonts/lobster14.otf);
+  // You can also link to this by: <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+}
+
+body {
+  background: #b3b3b3 image-url('chicago-background.jpg') top left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: $text-color;
+}
+
+a:link, a:visited {
+  color: $text-color;
+}
+
+h1.title {
+  font-family:Lobster;
+  font-weight:normal;
+  font-size:48px
+}
+
+.main-photo {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .home-page-navigation-large-screen {
+    display: none;
+  }
+  .home-page-navigation-small-screen {
+    .nav-icon {
+      padding-left: 25%;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-weight: 500;
+
+      a:hover {
+        color:#ffffff;
+        text-decoration: none;
+        text-shadow:1px 0px 1px #555;
+        z-index: 100;
+      }
+
+      p {
+        font-size: 35px;
+        font-variant: small-caps;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px #000000;
+      }
+    }
+    .contact {
+      padding-top: 35px;
+      a.linkedin {
+        display: block;
+        position: absolute;
+        width:75px;
+        height:75px;
+        background:url(/images/socialmedia.png) no-repeat;
+        padding-right: 5px;
+        left: 0px;
+      }
+      a.twitter {
+        display: block;
+        position: absolute;
+        width:75px;
+        height:75px;
+        background:url(/images/socialmedia.png) no-repeat;
+        background-position: -75px 0px;
+        padding-right: 5px;
+        left: 75px;
+      }
+      a.googleplus {
+        display: block;
+        position: absolute;
+        width:75px;
+        height:75px;
+        background:url(/images/socialmedia.png) no-repeat;
+        background-position: -151px 0px;
+        padding-right: 5px;
+        left: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home-page-navigation-small-screen {
+    display: none;
+  }
+  .home-page-navigation-large-screen {
+    .nav-icon {
+      position: absolute;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-weight: 500;
+      width: 250px;
+
+      p {
+        font-size: 35px;
+        font-variant: small-caps;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px #000000;
+        position: absolute;
+        left: 70px;
+        top: 10px;
+      }
+      img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+
+      .bubble {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width:65px;
+        height:65px;
+        opacity: 0.1;
+      }
+    }
+
+    .active {
+      color:#ffffff;
+      text-shadow:1px 0px 1px #555;
+      z-index: 100;
+    }
+
+    ul {
+      position: absolute;
+      top: 70px;
+      left: 25px;
+      display:none;
+      list-style-type: none;
+    }
+
+    // To be added later
+    .resume {
+      top: 150px;
+      left: 525px;
+    }
+    .github {
+      top: 10px;
+      left: 25px;
+    }
+    .blog {
+      top: 175px;
+      left: 125px;
+    }
+    .contact {
+      top: 340px;
+      left: 225px;
+      a.linkedin {
+        display: block;
+        position: absolute;
+        width:75px;
+        height:75px;
+        background:url(/images/socialmedia.png) no-repeat;
+        padding-right: 5px;
+        left: 0px;
+      }
+      a.twitter {
+        display: block;
+        position: absolute;
+        width:75px;
+        height:75px;
+        background:url(/images/socialmedia.png) no-repeat;
+        background-position: -75px 0px;
+        padding-right: 5px;
+        left: 75px;
+      }
+      a.googleplus {
+        display: block;
+        position: absolute;
+        width:75px;
+        height:75px;
+        background:url(/images/socialmedia.png) no-repeat;
+        background-position: -151px 0px;
+        padding-right: 5px;
+        left: 150px;
+      }
+    }
+  }
+}
+
+
+// Appearance animation
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s;
+}
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}

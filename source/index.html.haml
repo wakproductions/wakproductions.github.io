@@ -1,0 +1,108 @@
+---
+title: Winston Kotzan's Homepage
+---
+
+.row{ style: "margin-top: 15%;" }
+  .col-lg-4
+    .main-photo.welcome
+      = image_tag 'images/home-photo.png'
+      %h1.title{ style: "font-family: Lobster;" } Winston&nbsp;Kotzan
+
+  .col-lg-8.home-page-navigation-large-screen.welcome
+    .nav-icon.github
+      = link_to 'http://www.github.com/wakproductions', target: '_blank' do
+        = image_tag 'images/bubble.png', class: 'bubble'
+        = image_tag 'images/icon-github.png'
+        %p Github
+
+    .nav-icon.blog
+      = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
+        = image_tag 'images/bubble.png', class: 'bubble'
+        = image_tag 'images/icon-blog.png'
+        %p Blog
+
+    .nav-icon.contact
+      = image_tag 'images/bubble.png', class: 'bubble'
+      = image_tag 'images/icon-contact.png'
+      %p Contact
+      %ul{ style: "left: -20px;" }
+        %li
+          %a.linkedin{href:"http://www.linkedin.com/in/winstonkotzan", target:"_blank"}
+        %li
+          %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
+        %li
+          %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
+
+  .col-xs-12.home-page-navigation-small-screen.welcome
+    .nav-icon.github
+      %p
+        = link_to 'http://www.github.com/wakproductions', target: '_blank' do
+          = image_tag 'images/icon-github.png'
+          Github
+
+  .col-xs-12.home-page-navigation-small-screen.welcome
+    .nav-icon.blog
+      %p
+        = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
+          = image_tag 'images/icon-blog.png'
+          Blog
+
+  .col-xs-12.home-page-navigation-small-screen.welcome
+    .nav-icon.contact
+      .row
+        .col-xs-12
+          %a.linkedin{href:"http://www.linkedin.com/in/winstonkotzan", target:"_blank"}
+          %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
+          %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
+
+
+
+%script{:type => "text/javascript", :src  => "javascripts/jquery.easing.1.3.js"}
+
+-# This Javascript function is originally from http://tympanus.net/Tutorials/BubbleNavigation/#
+:javascript
+  $(function() {
+      $('.nav-icon').hover(
+      function () {
+          // This will draw the bubble when you hover over an icon
+          var $this = $(this);
+          var width = '220px';
+          var height = '220px';
+          var left = '-25px';
+          var top = '-70px';
+
+          // Special exception for "contact" icon since we want it to be bigger
+          if($this.hasClass('contact')) {
+            width = '270px';
+            height = '270px';
+            left = '-35px';
+            top = '-35px';
+          }
+          $this.find('.bubble').stop().animate({
+              'width'     :width,
+              'height'    :height,
+              'top'       :top,
+              'left'      :left,
+              'opacity'   :'1.0'
+          },500,'easeOutBack',function(){
+              $(this).parent().find('ul').fadeIn(700);
+          });
+
+          $this.find('p').addClass('active');
+      },
+      function () {
+          // This will fade away the bubble when you hover away from an icon
+          var $this = $(this);
+          $this.find('ul').fadeOut(500);
+          $this.find('.bubble').stop().animate({
+              'width'     :'52px',
+              'height'    :'52px',
+              'top'       :'0px',
+              'left'      :'0px',
+              'opacity'   :'0.1'
+          },5000,'easeOutBack');
+
+          $this.find('p').removeClass('active');
+      }
+    );
+  });
