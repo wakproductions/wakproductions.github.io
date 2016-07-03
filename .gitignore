@@ -3,7 +3,7 @@
 .sass-cache
 .gist-cache
 .pygments-cache
-.idea
+.idea/
 _deploy
 public
 sass.old
