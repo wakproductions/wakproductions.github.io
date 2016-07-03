@@ -69,6 +69,8 @@ GEM
       servolux
       tilt (~> 1.4.1)
       uglifier (~> 3.0)
+    middleman-gh-pages (0.3.0)
+      rake (> 0.9.3)
     minitest (5.9.0)
     padrino-helpers (0.13.2)
       i18n (~> 0.6, >= 0.6.7)
@@ -78,6 +80,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.9.0)
     rack (1.6.4)
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -96,8 +99,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (>= 4.0.0)
-  tzinfo-data
-  wdm (~> 0.1.0)
+  middleman-gh-pages (~> 0.3)
 
 BUNDLED WITH
-   1.10.3
+   1.12.5
