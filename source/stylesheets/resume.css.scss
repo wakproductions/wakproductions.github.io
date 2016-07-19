@@ -1,0 +1,166 @@
+@import 'font-awesome';
+@fa-font-path: "../font"; // font-awesome
+@font-face {
+  font-family: 'Ghostbusters';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ghostbusters'), url(/fonts/GHOSTBUS.TTF);
+}
+
+
+body {
+  background-color: #000330;
+  color: #ffffff;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background: no-repeat center center fixed url('/images/winston_ghostbuster_2800.jpg');
+  background-size: cover;
+  height: 600px;
+  margin: 0;
+
+  .container {
+    z-index: 4;
+    position: relative;
+    .content {
+      padding: 40px 20px;
+      position: relative;
+      text-shadow: 1px 1px #000000;
+
+      .page-header {
+        margin: 0 0 20px;
+        h2 { margin-top: 0; }
+      }
+
+      .content-overlay {
+        background-color: #ffffff;
+        position: absolute;
+
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+        opacity: 0.2;
+        z-index: 6;
+      }
+    }
+  }
+
+  .overlay {
+    background-color: #000440;
+    position: absolute;
+    height: 600px;
+
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    opacity: 0.6;
+    z-index: 2;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.nav-container {
+  background-color: #000440;
+  border-bottom: 1px solid #dddddd;
+  font-family: Cuprum;
+  font-size: 16pt;
+  text-align: center;
+  width: 100%;
+  z-index: 6;
+
+  // Not currently used. Created this as a potential way of getting around some additional spacing that
+  // was showing up at the bottom of the bar when using Bootstrap.
+  //.link {
+  //  display: inline-block;
+  //  float: none;
+  //  padding: 10px 15px;
+  //  a {
+  //    //padding: 50px;
+  //  }
+  //  a:hover, a:focus {
+  //    background: #dddddd;
+  //    background: -webkit-linear-gradient(#000440, #000440, #f0ad4e);
+  //    border-radius: 0;
+  //    border: none;
+  //    color: #dddddd;
+  //    text-decoration: none;
+  //    text-shadow:3px;
+  //  }
+  //}
+
+  .nav {
+    display: inline-block;
+    float: none;
+    border-bottom: none;
+    li > a:hover, li > a:focus {
+      background: #91692f;
+      background: -webkit-linear-gradient(#000440, #91692f, #000440);
+      background: -o-linear-gradient(#000440, #91692f, #000440);
+      background: -moz-linear-gradient(#000440, #91692f, #000440);
+      background: linear-gradient(#000440, #91692f, #000440);
+      border-radius: 0;
+      border: none;
+      color: #dddddd;
+      text-shadow:3px;
+    }
+  }
+}
+
+.section-header {
+  border-bottom: 1px solid #111111;
+  color: #111111;
+  font-family: 'Ghostbusters';
+  margin: 10px -15px;
+}
+
+.employer-description-box {
+  padding: 30px 25px;
+  h4 {
+    .underline {
+      border-bottom: 1px solid #111111;
+      padding-bottom: 3px;
+    }
+
+  }
+}
+
+.education {
+  background-color: #dddddd;
+  color: #111111;
+  .section-header {
+    //border-bottom: 0;// disabled due to color scheme
+  }
+  .purdue-box {
+    background: #91692f;
+    background: radial-gradient(rgba(255,255,255,0), rgba(177, 129, 11, 0.6));
+    //background: -webkit-radial-gradient(rgba(177, 129, 11, 1), rgba(255,255,255,0));
+    //background: -o-radial-gradient(rgba(177, 129, 11, 1), rgba(255,255,255,0));
+    //background: -moz-radial-gradient(rgba(177, 129, 11, 1), rgba(255,255,255,0));
+  }
+  .indiana-box {
+    background: radial-gradient(rgba(255,255,255,0), rgba(125, 17, 12, 0.6));
+    //background: -webkit-radial-gradient(rgba(125, 17, 12, 1), rgba(255,255,255,0));
+    //background: -o-radial-gradient(rgba(125, 17, 12, 1), rgba(255,255,255,0));
+    //background: -moz-radial-gradient(rgba(125, 17, 12, 1), rgba(255,255,255,0));
+  }
+}
+
+.work-history {
+  background-color: #dddddd;
+  color: #111111;
+  ul {
+    //@extend .fa-ul
+  }
+}

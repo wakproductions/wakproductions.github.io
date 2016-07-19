@@ -1,59 +1,61 @@
 ---
 title: Winston Kotzan's Homepage
+stylesheet: /stylesheets/site.css
 ---
 
-.row{ style: "margin-top: 15%;" }
-  .col-lg-4
-    .main-photo.welcome
-      = image_tag 'images/home-photo.png'
-      %h1.title{ style: "font-family: Lobster;" } Winston&nbsp;Kotzan
+.container
+  .row{ style: "margin-top: 15%;" }
+    .col-lg-4
+      .main-photo.welcome
+        = image_tag 'images/home-photo.png'
+        %h1.title{ style: "font-family: Lobster;" } Winston&nbsp;Kotzan
 
-  .col-lg-8.home-page-navigation-large-screen.welcome
-    .nav-icon.github
-      = link_to 'http://www.github.com/wakproductions', target: '_blank' do
-        = image_tag 'images/bubble.png', class: 'bubble'
-        = image_tag 'images/icon-github.png'
-        %p Github
-
-    .nav-icon.blog
-      = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
-        = image_tag 'images/bubble.png', class: 'bubble'
-        = image_tag 'images/icon-blog.png'
-        %p Blog
-
-    .nav-icon.contact
-      = image_tag 'images/bubble.png', class: 'bubble'
-      = image_tag 'images/icon-contact.png'
-      %p Contact
-      %ul{ style: "left: -20px;" }
-        %li
-          %a.linkedin{href:"http://www.linkedin.com/in/winstonkotzan", target:"_blank"}
-        %li
-          %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
-        %li
-          %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
-
-  .col-xs-12.home-page-navigation-small-screen.welcome
-    .nav-icon.github
-      %p
+    .col-lg-8.home-page-navigation-large-screen.welcome
+      .nav-icon.github
         = link_to 'http://www.github.com/wakproductions', target: '_blank' do
+          = image_tag 'images/bubble.png', class: 'bubble'
           = image_tag 'images/icon-github.png'
-          Github
+          %p Github
 
-  .col-xs-12.home-page-navigation-small-screen.welcome
-    .nav-icon.blog
-      %p
+      .nav-icon.blog
         = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
+          = image_tag 'images/bubble.png', class: 'bubble'
           = image_tag 'images/icon-blog.png'
-          Blog
+          %p Blog
 
-  .col-xs-12.home-page-navigation-small-screen.welcome
-    .nav-icon.contact
-      .row
-        .col-xs-12
-          %a.linkedin{href:"http://www.linkedin.com/in/winstonkotzan", target:"_blank"}
-          %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
-          %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
+      .nav-icon.contact
+        = image_tag 'images/bubble.png', class: 'bubble'
+        = image_tag 'images/icon-contact.png'
+        %p Contact
+        %ul{ style: "left: -20px;" }
+          %li
+            %a.linkedin{href:"http://www.linkedin.com/in/winstonkotzan", target:"_blank"}
+          %li
+            %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
+          %li
+            %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
+
+    .col-xs-12.home-page-navigation-small-screen.welcome
+      .nav-icon.github
+        %p
+          = link_to 'http://www.github.com/wakproductions', target: '_blank' do
+            = image_tag 'images/icon-github.png'
+            Github
+
+    .col-xs-12.home-page-navigation-small-screen.welcome
+      .nav-icon.blog
+        %p
+          = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
+            = image_tag 'images/icon-blog.png'
+            Blog
+
+    .col-xs-12.home-page-navigation-small-screen.welcome
+      .nav-icon.contact
+        .row
+          .col-xs-12
+            %a.linkedin{href:"http://www.linkedin.com/in/winstonkotzan", target:"_blank"}
+            %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
+            %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
 
 
 

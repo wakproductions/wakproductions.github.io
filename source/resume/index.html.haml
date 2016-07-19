@@ -1,0 +1,140 @@
+---
+title: Winston Kotzan's Interactive Resume
+stylesheet: /stylesheets/resume.css
+---
+
+.jumbotron
+  .container
+    .col-lg-offset-7.col-lg-5.content
+      .page-header
+        %h2 Hi, I'm Winston Kotzan
+      .about-me-bio
+        I'm a software engineer and geek with a passion for technology and the capital markets. At the age of 12,
+        I wrote my first program in QBASIC on my Packard Bell 386 computer and have ever since been hooked on
+        coding. Today I am a Ruby on Rails web developer with a career that has included working on Wall Street
+        as a stock analyst, healthcare, and tech startups. This page tells the story of my professional career.
+      .about-me-links
+
+      .content-overlay
+  .overlay
+
+#navigation.nav-container
+  %ul.nav.nav-tabs
+    %li{ role: 'presentation' }
+      =link_to("Education", '#education')
+    %li{ role: 'presentation' }
+      =link_to("Work History", "#workhistory")
+    %li{ role: 'presentation' }
+      =link_to("Projects", "#projects")
+    %li{ role: 'presentation' }
+      =link_to("Skills", "#skills")
+  -#This was an unsuccessful attempt at getting the gradient to perfectly line up with the bottom border.
+  -#Couldn't get it to work so changed the aesthetics of the gradient in a compromise for now. Problem is
+  -#couldn't figure out out correct height to set the padding for the <a> tag.
+  -# .link
+  -#   =link_to("Education", '#education')
+  -# .link
+  -#   =link_to("Work History", "#workhistory")
+  -# .link
+  -#   =link_to("Projects", "#projects")
+  -# .link
+  -#   =link_to("Skills", "#skills")
+
+.education
+  .container
+    .section-header
+      %h1 Education
+    .row
+      .col-lg-6.center.employer-description-box.purdue-box
+        =image_tag('purdue-motion-p.png')
+        %h4
+          %span.underline &nbsp;&nbsp;&nbsp;Purdue University&nbsp;&nbsp;&nbsp;
+        %h5 College of Technology
+        %h5 Associate of Science, Computer Information Systems
+      .col-lg-6.center.employer-description-box.indiana-box
+        =image_tag('iu-trident.png')
+        %h4
+          %span.underline &nbsp;&nbsp;&nbsp;Indiana University&nbsp;&nbsp;&nbsp;
+        %h5 Kelley School of Business
+        %h5 Bachelor of Science, Finance
+
+.work-history
+  .container
+    .section-header
+      %h1 Work History
+    .row
+      .col-lg-3.center.employer-description-box
+        =link_to(image_tag('avant-text-logo.png', style: 'width:200px;margin-top:5px;'), 'http://www.avant.com', target: '_blank')
+        %h4
+          %span.underline Senior Software Engineer
+        %h5 June 2015 - Present
+        %h5 Chicago, IL
+      .col-lg-9.employer-description-box
+        %p
+          Avant was one of Chicago's fastest growing finance startups. The company offers an online lending
+          platform that lowers the costs and barriers of borrowing loans for consumers.
+        %ul
+          %li Worked with 7-member loan servicing team to maintain a Ruby-driven accounting system for a $3 billion loan portfolio.
+          %li Contributed to the redesign of Avant’s monolithic Ruby on Rails application into an API-based service architecture.
+          %li Developed and added to public domain gems including Production Sampler and Actionizer.
+          %li Took charge of project to redesign the accounting system for credit lines product, rectifying over 90% existing accounting issues across several thousand loans.
+          %li Improved documentation for other developers by creating Wikis on system structure and technology-intensive workflows.
+        %p Technologies: Ruby on Rails 3.2 & 4.2, RSpec, Postgresql, Heroku, Amazon S3, Solano CI, Circle-CI, Github, Hipchat
+        -# Follow the pattern: Principal backend systems/framework, front end frameworks, test suite, DB, deployment platform, CI-system, VCS, other systems
+        -
+    .row
+      .col-lg-3.center.employer-description-box
+        =link_to(image_tag('nextgear-capital-logo.png', style: 'width:200px;margin-top:5px;'), 'http://www.nextgearcapital.com', target: '_blank')
+        %h4
+          %span.underline Software Developer
+        %h5 September 2013 - December 2013
+        %h5 Indianapolis, IN
+      .col-lg-9.employer-description-box
+        %p
+          NextGear Capital, a division of COX Enterprises, provides inventory financing services for car dealers.
+        %ul
+          %li Performed full stack development as part of an Agile Ruby on Rails team.
+          %li Collaborated on project to create a Ruby on Rails-based content management system for internal legal team.
+        %p Technologies: Ruby on Rails 4, HTML/CSS, Javascript, JQuery, Rspec, Cucumber, Vagrant, SQL Server, Bitbucket, Hipchat
+
+    .row
+      .col-lg-3.center.employer-description-box
+        =link_to(image_tag('lunker-logo.png', style: 'width:200px;margin-top:5px;'), 'http://www.lunker.com', target: '_blank')
+        %h4
+          %span.underline CoFounder & CTO
+        %h5 May 2012 - December 2013
+        %h5 Indianapolis, IN
+      .col-lg-9.employer-description-box
+        %p
+          Lunker is a startup social network for fishing enthusiasts. It was launched by me and Henry Graves
+          after winning the Startup Weekend Bloomington May 2012 competition. I performed all technical work on the
+          website which included the full stack design and coding.
+        %ul
+          %li #1
+          %li
+        %p Technologies: Ruby on Rails 4, HTML/CSS, Javascript, JQuery, Rspec, Cucumber, Vagrant, SQL Server, Bitbucket, Hipchat
+
+
+.skills
+  I like the problem solving aspects of creating software. Computers are best at organizing data and I like
+  directing my talents in working with data toward solving practical problems. I'm strongest in SQL and back-end
+  system design, but can also do full stack web development and enjoy the encompassing task of building a
+  website to perform a specific task.
+
+  %ul
+    %li Ruby on Rails
+    %li Javascript
+    %li HTML
+    %li CSS
+    %li Documentation/Technical Writing
+
+:javascript
+  // Keep the navbar sticky at the top of the screen
+  // source: http://stackoverflow.com/questions/2907367/have-a-div-cling-to-top-of-screen-if-scrolled-down-past-it
+  var $window = $(window),
+       $stickyEl = $('#navigation'),
+       elTop = $stickyEl.offset().top;
+
+   $window.scroll(function() {
+        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+    });
