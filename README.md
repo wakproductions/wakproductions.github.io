@@ -16,6 +16,7 @@ NextGear Capital Logo: https://www.nextgearcapital.com/
 FDB Logo: http://www.hearst.com
 Allscripts Logo: http://medmgtservices.com/wp-content/uploads/2014/04/Allscripts_logo_RGB.png
 Leerink Logo: http://www.leerink.com/
+CC Industries Logo: https://www.linkedin.com/company/cc-industries?trk=mini-profile
 
 ## TODO
 * Fix Ghostbuster font issue on IE by converting TTF to OTF
