@@ -45,6 +45,13 @@ stylesheet: /stylesheets/site.css
     .col-xs-12.home-page-navigation-small-screen.welcome
       .nav-icon.github
         %p
+          = link_to '/resume' do
+            = image_tag 'images/icon-resume.png'
+            Résumé
+
+    .col-xs-12.home-page-navigation-small-screen.welcome
+      .nav-icon.github
+        %p
           = link_to 'http://www.github.com/wakproductions', target: '_blank' do
             = image_tag 'images/icon-github.png'
             Github
