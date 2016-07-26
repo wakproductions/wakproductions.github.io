@@ -1,5 +1,5 @@
 @import 'font-awesome';
-@fa-font-path: "../font"; // font-awesome
+@fa-font-path: "../fonts"; // font-awesome
 @font-face {
   font-family: 'Ghostbusters';
   font-style: normal;
@@ -7,10 +7,10 @@
   src: local('Ghostbusters'), url(/fonts/GHOSTBUS.TTF);
 }
 
-
-body {
+html, body {
   background-color: #000330;
   color: #ffffff;
+  height: 100%;
 }
 
 .center {
@@ -22,11 +22,15 @@ body {
   background-size: cover;
   height: 600px;
   margin: 0;
+  padding: 0;
 
   .container {
     z-index: 4;
     position: relative;
+
     .content {
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-top: 50px;
       padding: 40px 20px;
       position: relative;
       text-shadow: 1px 1px #000000;
@@ -36,17 +40,12 @@ body {
         h2 { margin-top: 0; }
       }
 
-      .content-overlay {
-        background-color: #ffffff;
-        position: absolute;
-
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-
-        opacity: 0.2;
-        z-index: 6;
+      .about-me-links {
+        a:link, a:hover, a:visited {
+          color: inherit;
+          text-decoration: none;
+        }
+        margin-top: 25px;
       }
     }
   }
@@ -125,7 +124,7 @@ body {
   margin: 10px -15px;
 }
 
-.employer-description-box {
+.workplace-description-box {
   padding: 30px 25px;
   h4 {
     .underline {
@@ -136,31 +135,109 @@ body {
   }
 }
 
-.education {
-  background-color: #dddddd;
+#education {
+  background-color: #000330;
+  //background: #121212;
+  //background-color: #dddddd;
+  //background: linear-gradient(115deg, #000000, rgba(177, 129, 11, 1), rgba(125, 17, 12, 0.6), #000000);
   color: #111111;
+  padding-bottom: 25px;
   .section-header {
-    //border-bottom: 0;// disabled due to color scheme
+    color: #dddddd;
+    border-bottom: 1px solid #dddddd;
+    text-shadow: 0px 0px 10px rgb(177, 129, 11);
   }
   .purdue-box {
-    background: #91692f;
-    background: radial-gradient(rgba(255,255,255,0), rgba(177, 129, 11, 0.6));
-    //background: -webkit-radial-gradient(rgba(177, 129, 11, 1), rgba(255,255,255,0));
-    //background: -o-radial-gradient(rgba(177, 129, 11, 1), rgba(255,255,255,0));
-    //background: -moz-radial-gradient(rgba(177, 129, 11, 1), rgba(255,255,255,0));
+    //background: #91692f;
+    background: radial-gradient(rgba(221,221,221,1), rgba(177, 129, 11, 0.6));
+    //background: radial-gradient(rgba(255,255,255,0), rgba(177, 129, 11, 0.6));
   }
   .indiana-box {
-    background: radial-gradient(rgba(255,255,255,0), rgba(125, 17, 12, 0.6));
-    //background: -webkit-radial-gradient(rgba(125, 17, 12, 1), rgba(255,255,255,0));
-    //background: -o-radial-gradient(rgba(125, 17, 12, 1), rgba(255,255,255,0));
-    //background: -moz-radial-gradient(rgba(125, 17, 12, 1), rgba(255,255,255,0));
+    background: radial-gradient(rgba(221,221,221,1), rgba(125, 17, 12, 0.6));
+    //background: radial-gradient(rgba(255,255,255,0), rgba(125, 17, 12, 0.6));
   }
 }
 
-.work-history {
+#work-history {
   background-color: #dddddd;
+
+  .image-background {
+    background: no-repeat center center fixed url('/images/background-work-history.jpg');
+    background-size: cover;
+    padding-bottom: 25px;
+  }
+  .container {
+    .section-header {
+      background-color: #dddddd;
+      margin-bottom: 0;
+      margin-top: 25px;
+      padding-top: 10px;
+
+      h1 {
+        padding-left: 3px;
+      }
+    }
+  }
+  .row {
+    background-color: #dddddd;
+  }
+  //.row-bottom {
+  //  margin-bottom: 25px;
+  //}
   color: #111111;
   ul {
     //@extend .fa-ul
   }
+}
+
+#skills {
+  background-color: #000330;
+  color: #eeeeee;
+  font-family: 'Open Sans';
+  font-size: 14pt;
+  padding-bottom: 25px;
+
+  .container {
+    .section-header {
+      border-bottom: 1px solid #eeeeee;
+      margin-bottom: 0;
+      margin-top: 25px;
+      padding-top: 10px;
+
+      h1 {
+        color: #eeeeee;
+      }
+    }
+  }
+
+  .skill-list {
+    background-color: #000AA0;
+    font-size: 14pt;
+    line-height: 1.7em;
+    padding: 3px 15px;
+
+    .fa {
+      color: #ffff00;
+    }
+    .spacer {
+      margin-right: 5px;
+    }
+
+    h3 {
+      padding: 0 20px;
+
+    }
+
+    ul {
+      padding: 10px 20px;
+      list-style-type: none;
+    }
+  }
+}
+
+#copyright {
+  border-top: 1px solid #dddddd;
+  background-color: #000000;
+  padding: 40px;
+  text-align: center;
 }

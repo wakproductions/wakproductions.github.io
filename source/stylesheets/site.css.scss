@@ -146,22 +146,21 @@ h1.title {
       list-style-type: none;
     }
 
-    // To be added later
     .resume {
-      top: 150px;
-      left: 525px;
-    }
-    .github {
-      top: 10px;
+      top: -15px;
       left: 25px;
     }
-    .blog {
-      top: 175px;
+    .github {
+      top: 110px;
       left: 125px;
     }
-    .contact {
-      top: 340px;
+    .blog {
+      top: 235px;
       left: 225px;
+    }
+    .contact {
+      top: 360px;
+      left: 325px;
       a.linkedin {
         display: block;
         position: absolute;

@@ -11,6 +11,12 @@ stylesheet: /stylesheets/site.css
         %h1.title{ style: "font-family: Lobster;" } Winston&nbsp;Kotzan
 
     .col-lg-8.home-page-navigation-large-screen.welcome
+      .nav-icon.resume
+        = link_to '/resume' do
+          = image_tag 'images/bubble.png', class: 'bubble'
+          = image_tag 'images/icon-resume.png'
+          %p Résumé
+
       .nav-icon.github
         = link_to 'http://www.github.com/wakproductions', target: '_blank' do
           = image_tag 'images/bubble.png', class: 'bubble'
@@ -34,6 +40,7 @@ stylesheet: /stylesheets/site.css
             %a.twitter{href:"https://twitter.com/greenspudtrades", target:"_blank"}
           %li
             %a.googleplus{href:"https://plus.google.com/+WinstonKotzan", target:"_blank"}
+
 
     .col-xs-12.home-page-navigation-small-screen.welcome
       .nav-icon.github
@@ -72,6 +79,11 @@ stylesheet: /stylesheets/site.css
           var height = '220px';
           var left = '-25px';
           var top = '-70px';
+
+          // Special exception for "resume" icon
+          if($this.hasClass('resume')) {
+            left = '-12px';
+          }
 
           // Special exception for "contact" icon since we want it to be bigger
           if($this.hasClass('contact')) {
