@@ -1,0 +1,454 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- JQuery -->
+  <script src="/javascripts/jquery-2.2.3.min.js"></script>
+  <!-- Twitter Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- Local site settings -->
+  <link rel="stylesheet" href="/stylesheets/resume.css">
+  <!--<link rel="stylesheet" href="stylesheets/font-awesome.min.css">-->
+
+  <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <title>Winston Kotzan's Interactive Resume</title>
+  
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-46648633-1', 'winstonkotzan.com');
+    ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+
+<div class='jumbotron'>
+  <div class='container'>
+    <div class='col-lg-offset-7 col-lg-5 content'>
+      <div class='page-header'>
+        <h2>Hi, I'm Winston Kotzan</h2>
+      </div>
+      <div class='about-me-bio'>
+        I'm a software engineer and geek with a passion for technology and the capital markets. At the age of 12,
+        I wrote my first program in QBASIC on my Packard Bell 386 computer and have ever since been hooked on
+        coding. Today I am a Ruby on Rails web developer with a career that has included working on Wall Street
+        as a stock analyst, healthcare, and tech startups. This page tells the story of my professional career.
+      </div>
+      <div class='about-me-links'>
+        <a href="https://www.linkedin.com/in/WinstonKotzan" target="_blank"><i aria-hidden='true' class='fa fa-linkedin-square fa-2x'></i>
+        </a>
+        <a href="https://www.github.com/wakproductions" target="_blank"><i aria-hidden='true' class='fa fa-github-square fa-2x'></i>
+        </a>
+        <a href="https://www.twitter.com/greenspudtrades" target="_blank"><i aria-hidden='true' class='fa fa-twitter-square fa-2x'></i>
+        </a>
+        <a href="https://plus.google.com/+WinstonKotzan" target="_blank"><i aria-hidden='true' class='fa fa-google-plus-square fa-2x'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class='overlay'></div>
+</div>
+<script>
+  $(function () {
+    $('.jumbotron').height($(window).height());
+    $('.jumbotron > .overlay').height($(window).height());
+  })
+</script>
+<div id='education'>
+  <div class='container'>
+    <div class='section-header'>
+      <h1>Education</h1>
+    </div>
+    <div class='row'>
+      <div class='col-lg-6 center workplace-description-box purdue-box'>
+        <img src="/images/purdue-motion-p.png" alt="Purdue motion p" />
+        <h4>
+          <span class='underline'>&nbsp;&nbsp;&nbsp;Purdue University&nbsp;&nbsp;&nbsp;</span>
+        </h4>
+        <h5>College of Technology</h5>
+        <h5>Associate of Science, Computer Information Systems</h5>
+      </div>
+      <div class='col-lg-6 center workplace-description-box indiana-box'>
+        <img src="/images/iu-trident.png" alt="Iu trident" />
+        <h4>
+          <span class='underline'>&nbsp;&nbsp;&nbsp;Indiana University&nbsp;&nbsp;&nbsp;</span>
+        </h4>
+        <h5>Kelley School of Business</h5>
+        <h5>Bachelor of Science, Finance</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='work-history'>
+  <div class='image-background'>
+    <div class='container'>
+      <div class='section-header'>
+        <h1>Professional Experience</h1>
+      </div>
+      <div class='row'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.avant.com" target="_blank"><img src="/images/logo-avant-text.png" style="width:200px;margin-top:5px;" alt="Logo avant text" /></a>
+          <h4>
+            <span class='underline'>Senior Software Engineer</span>
+          </h4>
+          <h5>June 2015 - August 2016</h5>
+          <h5>Chicago, IL</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            Avant was one of Chicago's fastest growing finance startups. The company offers an online lending
+            platform that lowers the costs and barriers of borrowing loans for consumers. I worked on the 7-member
+            agile loan servicing team who maintained the Ruby-driven back end accounting system for Avant's
+            $3 billion loan portfolio.
+          </p>
+          <ul>
+            <li>Contributed to the redesign of Avant’s monolithic Ruby on Rails application into an API-based service architecture.</li>
+            <li>Developed and added to public domain gems including Production Sampler and Actionizer.</li>
+            <li>Took charge of project to redesign the accounting system for credit lines product, rectifying over 90% existing accounting issues across several thousand loans.</li>
+            <li>Improved documentation for other developers by creating Wikis on system structure and technology-intensive workflows.</li>
+          </ul>
+          <p>Technologies: Ruby on Rails 3.2 & 4.2, RSpec, Resque, Postgresql, Heroku, Amazon S3, Solano CI, Circle-CI, Github, Hipchat, Pivotal Tracker</p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.nextgearcapital.com" target="_blank"><img src="/images/logo-nextgear.png" style="width:200px;margin-top:5px;" alt="Logo nextgear" /></a>
+          <h4>
+            <span class='underline'>Software Developer</span>
+          </h4>
+          <h5>September 2013 - December 2013</h5>
+          <h5>Indianapolis, IN</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            NextGear Capital, a division of COX Enterprises, provides inventory financing services for car dealers.
+          </p>
+          <ul>
+            <li>Performed full stack development as part of an Agile Ruby on Rails team.</li>
+            <li>Collaborated on project to create a Ruby on Rails-based content management system for internal legal team.</li>
+          </ul>
+          <p>Technologies: Ruby on Rails 4, HTML/CSS, Javascript, JQuery, Rspec, Cucumber, Vagrant, SQL Server, Bitbucket, Balsamiq, Hipchat</p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.lunker.com" target="_blank"><img src="/images/logo-lunker.png" style="width:200px;margin-top:5px;" alt="Logo lunker" /></a>
+          <h4>
+            <span class='underline'>Co-founder & CTO</span>
+          </h4>
+          <h5>May 2012 - December 2013</h5>
+          <h5>Indianapolis, IN</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            Lunker is a startup social network for fishing enthusiasts. It was launched by me and co-founder Henry Graves
+            after winning first place in the Startup Weekend Bloomington May 2012 competition. I performed all technical
+            work on the website which included the full stack design, coding, and deployment.
+          </p>
+          <ul>
+            <li>Designed and developed website Lunker.com.</li>
+            <li>Team consisted of product owner and UX designer to outline and wireframe functional requirements.</li>
+          </ul>
+          <p>
+            Technologies: Ruby on Rails 4, HTML/CSS, Javascript, JQuery, Postgresql, Heroku,
+            Amazon S3, Mandrill, Github, Hipchat
+          </p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.fdbhealth.com" target="_blank"><img src="/images/logo-fdb.png" style="height:60px;margin-top:5px;" alt="Logo fdb" /></a>
+          <h4>
+            <span class='underline'>Implementation Specialist</span>
+          </h4>
+          <h5>December 2011 - September 2013</h5>
+          <h5>Indianapolis, IN</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            First Databank is the leading provider of pharmaceuticals data for the healthcare industry. The company's
+            product consists of hundreds of tables of information including lookup tables for
+            adverse interactions between drugs, drug allergy relationships, chemical properties, FDA labeling, dosage
+            information, common presciptions, clinical order system configurations, and pricing. The product can be
+            accessed through relational data loaded into a database or via a Java or .NET API for applications. As an
+            implementations specialist, I assisted healthcare clinical and IT professionals build medical applications
+            that made use of this data.
+          </p>
+          <ul>
+            <li>
+              Invented and coded a C#.NET software tool that automated the data load process for clients,
+              reducing a cumbersome manual loading process from several weeks to several minutes.
+            </li>
+            <li>
+              Led development of Go Live Med Orders, a data product for hospitals that allowed FDB's presciption database
+              to be customized based on the hospital's formulary and loaded into MEDITECH CPOE systems.
+            </li>
+            <li>
+              Acted as a technical liason for the sales team when talking to new clients, helping to close several large
+              contracts.
+            </li>
+            <li>Worked with technical writing team to enhance product documentation based on customer feedback.</li>
+          </ul>
+          <p>
+            Technologies/Skills: SQL (MS-Access, SQL Server, MySQL, Postgres, Oracle), C#.NET native Windows
+            applications, Excel, interpersonal skills for working directly with clients
+          </p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.allscripts.com" target="_blank"><img src="/images/logo-allscripts.png" style="width:200px;margin-top:5px;" alt="Logo allscripts" /></a>
+          <h4>
+            Manager of Contract<br />
+            <span class='underline'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Administration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </h4>
+          <h5>August 2009 - December 2010</h5>
+          <h5>Chicago, IL</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            Allscripts is one of the leading vendors of clinical information systems for hospitals and physicians. I began
+            working at Allscripts as a contractor for a finance department auditing project and quickly was hired to work
+            as a full time employee managing the enterprise contracts department.
+          </p>
+          <ul>
+            <li>As member of a 10 person team, audited $21 million of billings and helped recover ~$460k in erroneously unbilled and uncollected receivables.</li>
+            <li>Performed analysis and interpretation of multi-million dollar contracts.</li>
+            <li>Redesigned the business workflows within the finance department for recording enterprise contracts.</li>
+            <li>Created Excel and Outlook VBA scripts for more efficient tracking of contractual milestones.</li>
+            <li>Supervised three-person team of consultants and trained new billing analysts to take over revised processes.</li>
+          </ul>
+          <p>
+            Technologies/Skills: Excel, VBA Scripting, knowledge of finance for contract interpretation and business process
+            redesign
+          </p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.leerink.com" target="_blank"><img src="/images/logo-leerink.png" style="width:200px;margin-top:5px;" alt="Logo leerink" /></a>
+          <h4>
+            <span class='underline'>Equity Research Associate</span>
+          </h4>
+          <h5>June 2008 - March 2019</h5>
+          <h5>New York, NY</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            Leerink is a speciality investment bank with a pure focus on the healthcare industry. In my first job after
+            graduating with a finance degree, I performed equity research on 12 healthcare technology stocks. Knowledge
+            of finance and software were both useful in this role. There was a great deal of on-the-job learning regarding
+            the healthcare industry as I was quickly introduced to the cycle of Washington politics and legislation
+            that drive healthcare administrative decisions.
+          </p>
+          <ul>
+            <li>Actively compiled industry knowledge and monitored news flow related to the healthcare sector.</li>
+            <li>Participated in public and private conference calls with the executive teams of corporations.</li>
+            <li>Built extensive financial models in Excel and wrote investment analysis reports on subject companies.</li>
+            <li>Read proposed legislation on the HITECH Act and advised on the implications for "Meaningful Use" on healthcare IT.</li>
+          </ul>
+          <p>
+            Technologies/Skills: Excel, knowledge of finance and capital markets
+          </p>
+        </div>
+      </div>
+      <div class='row row-bottom'>
+        <div class='col-lg-3 center workplace-description-box'>
+          <a href="http://www.leerink.com" target="_blank"><img src="/images/logo-cc-industries.png" alt="Logo cc industries" /></a>
+          <h4>
+            <span class='underline'>Software Developer Intern</span>
+          </h4>
+          <h5>Summer 2004 & 2005</h5>
+          <h5>Chicago, IL</h5>
+        </div>
+        <div class='col-lg-9 workplace-description-box'>
+          <p>
+            CC Industries is the financial holdings company and headquarters for the conglomerate started by the
+            famed industrialist Colonel Henry Crown. As an intern within the central IT department, I worked on
+            improving applications for internal use across all lines of business.
+          </p>
+          <ul>
+            <li>Conducted major redesign the company’s internal project management and support ticket website.</li>
+            <li>In the second year, collaborated with a 4-person development team to expand and enhance the system.</li>
+            <li>Worked across departments to gather requirements for software development projects.</li>
+            <li>Wrote detailed documentation and diagrams for use by future teams.</li>
+          </ul>
+          <p>
+            Technologies/Skills: ASP, MS-Access, SQL Server, DotNetNuke Content Management System, Visio
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='skills'>
+  <div class='container'>
+    <div class='section-header'>
+      <h1>Skills</h1>
+    </div>
+    <div class='row'>
+      <div class='col-lg-12 workplace-description-box'>
+        I like the problem solving aspects of creating software. Computers are best at organizing data and I like
+        directing my talents in working with data toward solving practical problems. I'm strongest in SQL and back-end
+        system design, but can also do full stack web development and enjoy the encompassing task of building a
+        website to perform a specific task.
+      </div>
+    </div>
+    <div class='row skill-list'>
+      <div class='col-lg-6'>
+        <h3>Web Technologies</h3>
+        <ul>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            Ruby on Rails
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            HTML
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            CSS
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            SQL
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            Twitter Bootstrap
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-half-full'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            Javascript
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            JQuery
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            UX/Design
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            Web Server Administration
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            Ember.js
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o'></i>
+            <i aria-hidden='true' class='fa fa-star-o spacer'></i>
+            Angular.js
+          </li>
+        </ul>
+      </div>
+      <div class='col-lg-6'>
+        <h3>Business Skills & Tools</h3>
+        <ul>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            Microsoft Excel
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            Documentation/Technical Writing
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            Knowledge of Finance & Capital Markets
+          </li>
+          <li>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star'></i>
+            <i aria-hidden='true' class='fa fa-star spacer'></i>
+            Team Collaboration
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='copyright'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-12'>
+        &copy; 2016 WAK Productions
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

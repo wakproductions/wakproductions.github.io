@@ -475,17 +475,17 @@ h1.title {
     display: none;
     list-style-type: none; }
   .home-page-navigation-large-screen .resume {
-    top: 150px;
-    left: 525px; }
-  .home-page-navigation-large-screen .github {
-    top: 10px;
+    top: -15px;
     left: 25px; }
-  .home-page-navigation-large-screen .blog {
-    top: 175px;
+  .home-page-navigation-large-screen .github {
+    top: 110px;
     left: 125px; }
-  .home-page-navigation-large-screen .contact {
-    top: 340px;
+  .home-page-navigation-large-screen .blog {
+    top: 235px;
     left: 225px; }
+  .home-page-navigation-large-screen .contact {
+    top: 360px;
+    left: 325px; }
     .home-page-navigation-large-screen .contact a.linkedin {
       display: block;
       position: absolute;
