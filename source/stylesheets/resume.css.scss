@@ -41,11 +41,17 @@ html, body {
       }
 
       .about-me-links {
+        margin-top: 25px;
+        text-align: center;
+
         a:link, a:hover, a:visited {
           color: inherit;
           text-decoration: none;
         }
-        margin-top: 25px;
+
+        .fa {
+          padding: 5px;
+        }
       }
     }
   }
