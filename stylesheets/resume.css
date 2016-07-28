@@ -2219,10 +2219,13 @@ html, body {
         .jumbotron .container .content .page-header h2 {
           margin-top: 0; }
       .jumbotron .container .content .about-me-links {
-        margin-top: 25px; }
+        margin-top: 25px;
+        text-align: center; }
         .jumbotron .container .content .about-me-links a:link, .jumbotron .container .content .about-me-links a:hover, .jumbotron .container .content .about-me-links a:visited {
           color: inherit;
           text-decoration: none; }
+        .jumbotron .container .content .about-me-links .fa {
+          padding: 5px; }
   .jumbotron .overlay {
     background-color: #000440;
     position: absolute;
