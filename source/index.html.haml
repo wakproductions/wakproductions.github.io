@@ -23,11 +23,17 @@ stylesheet: /stylesheets/site.css
           = image_tag 'images/icon-github.png'
           %p Github
 
-      .nav-icon.blog
-        = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
+      .nav-icon.technology-blog
+        = link_to 'http://www.winstonkotzan.com/blog', target: '_blank' do
           = image_tag 'images/bubble.png', class: 'bubble'
           = image_tag 'images/icon-blog.png'
-          %p Blog
+          %p Tech Blog
+
+      .nav-icon.greenspud-trades-blog
+        = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
+          = image_tag 'images/bubble.png', class: 'bubble'
+          = image_tag 'images/icon-stock-blog.png'
+          %p Stocks Blog
 
       .nav-icon.contact
         = image_tag 'images/bubble.png', class: 'bubble'
@@ -57,11 +63,18 @@ stylesheet: /stylesheets/site.css
             Github
 
     .col-xs-12.home-page-navigation-small-screen.welcome
-      .nav-icon.blog
+      .nav-icon.technology-blog
+        %p
+          = link_to 'http://www.winstonkotzan.com/blog', target: '_blank' do
+            = image_tag 'images/icon-blog.png'
+            Tech Blog
+
+    .col-xs-12.home-page-navigation-small-screen.welcome
+      .nav-icon.greenspud-trades-blog
         %p
           = link_to 'http://www.greenspudtrades.com/', target: '_blank' do
-            = image_tag 'images/icon-blog.png'
-            Blog
+            = image_tag 'images/icon-stock-blog.png'
+            Stocks Blog
 
     .col-xs-12.home-page-navigation-small-screen.welcome
       .nav-icon.contact

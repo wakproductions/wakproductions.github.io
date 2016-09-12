@@ -10,5 +10,4 @@ source 'https://rubygems.org'
 
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
-gem 'middleman-gh-pages',   '~> 0.3' # going to use middleman-deploy instead
-# gem 'middleman-deploy'
+gem 'middleman-gh-pages',   '~> 0.3'
