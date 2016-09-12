@@ -443,7 +443,7 @@ h1.title {
     position: absolute;
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 500;
-    width: 250px; }
+    width: 300px; }
     .home-page-navigation-large-screen .nav-icon p {
       font-size: 35px;
       font-variant: small-caps;
@@ -475,16 +475,19 @@ h1.title {
     display: none;
     list-style-type: none; }
   .home-page-navigation-large-screen .resume {
-    top: -15px;
+    top: -30px;
     left: 25px; }
   .home-page-navigation-large-screen .github {
-    top: 110px;
-    left: 125px; }
-  .home-page-navigation-large-screen .blog {
-    top: 235px;
-    left: 225px; }
+    top: 70px;
+    left: 100px; }
+  .home-page-navigation-large-screen .technology-blog {
+    top: 170px;
+    left: 175px; }
+  .home-page-navigation-large-screen .greenspud-trades-blog {
+    top: 270px;
+    left: 250px; }
   .home-page-navigation-large-screen .contact {
-    top: 360px;
+    top: 370px;
     left: 325px; }
     .home-page-navigation-large-screen .contact a.linkedin {
       display: block;
