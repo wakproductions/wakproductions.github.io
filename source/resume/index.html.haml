@@ -12,7 +12,7 @@ stylesheet: /stylesheets/resume.css
         I'm a software engineer and geek with a passion for technology and the capital markets. At the age of 12,
         I wrote my first program in QBASIC on my Packard Bell 386 computer and have ever since been hooked on
         coding. Today I am a Ruby on Rails web developer with a career that has included working on Wall Street
-        as a stock analyst, healthcare, and tech startups. This page tells the story of my professional career.
+        as a stock analyst, healthcare, and tech startups.
       .about-me-links
         =link_to 'https://www.linkedin.com/in/WinstonKotzan', target: '_blank' do
           %i.fa.fa-linkedin.fa-2x{ 'aria-hidden'=>"true" }
@@ -68,6 +68,25 @@ stylesheet: /stylesheets/resume.css
         %h1 Professional Experience
       .row
         .col-lg-3.center.workplace-description-box
+          =link_to(image_tag('logo-finavigator-long.png', style: 'width:200px;margin-top:5px;'), 'http://www.finavigator.com', target: '_blank')
+          %h4
+            %span.underline Senior Software Engineer
+          %h5 September 2016 - Present
+        .col-lg-9.workplace-description-box
+          %p
+            FI Navigator helps financial companies make better strategic decisions through the use of proprietary
+            analytics. As a member of a small team of developers, I was instrumental in helping the company build the
+            technology back-end for new products. In addition to acting as full time developer, this role often required
+            me to use business analyst and devops engineer skills.
+          %ul
+            %li Built Rails/MySQL apps that efficiently load and query terrabytes of financial information.
+            %li Provisioned and managed Ubuntu Linux resources as needed on AWS EC2.
+            %li Built API interfaces to extract large data sets from the Common Crawl project and financial regulatory agencies
+          %p Technologies: Ruby on Rails 5, RSpec, MySQL, Sidekiq, Capistrano, Ansible, Amazon Web Services (EC2, S3), Docker, Circle-CI, Github, Slack
+          -# Follow the pattern: Principal backend systems/framework, front end frameworks, test suite, DB, deployment platform, CI-system, VCS, other systems
+          -
+      .row
+        .col-lg-3.center.workplace-description-box
           =link_to(image_tag('logo-avant-text.png', style: 'width:200px;margin-top:5px;'), 'http://www.avant.com', target: '_blank')
           %h4
             %span.underline Senior Software Engineer
@@ -84,7 +103,7 @@ stylesheet: /stylesheets/resume.css
             %li Developed and added to public domain gems including Production Sampler and Actionizer.
             %li Took charge of project to redesign the accounting system for credit lines product, rectifying over 90% existing accounting issues across several thousand loans.
             %li Improved documentation for other developers by creating Wikis on system structure and technology-intensive workflows.
-          %p Technologies: Ruby on Rails 3.2 & 4.2, RSpec, Resque, Postgresql, Heroku, Amazon S3, Solano CI, Circle-CI, Github, Hipchat, Pivotal Tracker
+          %p Technologies: Ruby on Rails 3.2 & 4.2, RSpec, Resque, Postgresql, Heroku, Amazon Web Services (S3), Solano CI, Circle-CI, Github, Hipchat, Pivotal Tracker
           -# Follow the pattern: Principal backend systems/framework, front end frameworks, test suite, DB, deployment platform, CI-system, VCS, other systems
           -
       .row
@@ -120,7 +139,7 @@ stylesheet: /stylesheets/resume.css
 
           %p
             Technologies: Ruby on Rails 3.2, HTML/CSS, Twitter Bootstrap, Javascript, JQuery, Postgresql, Heroku,
-            Amazon S3, Mandrill, Github, Hipchat
+            Amazon Web Services (S3), Mandrill, Github, Hipchat
 
       .row
         .col-lg-3.center.workplace-description-box
@@ -294,29 +313,24 @@ stylesheet: /stylesheets/resume.css
             %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
             %i.fa.fa-star-o.spacer{ 'aria-hidden'=>'true' }
             UX/Design
-          %li
-            %i.fa.fa-star{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o.spacer{ 'aria-hidden'=>'true' }
-            12-Factor Web Deployment
-          %li
-            %i.fa.fa-star{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o.spacer{ 'aria-hidden'=>'true' }
-            Ember.js
-          %li
-            %i.fa.fa-star{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o{ 'aria-hidden'=>'true' }
-            %i.fa.fa-star-o.spacer{ 'aria-hidden'=>'true' }
-            Angular.js
 
       .col-lg-6
+        %h3 Design Philosophies
+        %ul
+          %li
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            12-Factor Design
+          %li
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            %i.fa.fa-star{ 'aria-hidden'=>'true' }
+            SOLID Design Concepts
         %h3 Business Skills & Tools
         %ul
           %li
