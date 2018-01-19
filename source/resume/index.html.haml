@@ -68,10 +68,26 @@ stylesheet: /stylesheets/resume.css
         %h1 Professional Experience
       .row
         .col-lg-3.center.workplace-description-box
+          %h4
+            %span.underline Web Development Consultant
+          %h5 September 2016 - Present
+          %h5 Indianapolis, IN
+        .col-lg-9.workplace-description-box
+          %p
+            Collaborating with small companies to help build back-end technologies for new products.
+          %ul
+            %li Worked with several companies, developing Ruby on Rails based web applications for new products
+            %li Provisioned and administered Linux servers via AWS for hosting Dockerized applications and databases
+            %li Built API interfaces to extract large data sets, such as banking financials from Federal regulatory agencies
+            %li Collaborated with teams that value enterprise-scale design patterns such as SOLID and clean architecture
+          %p Technologies: Ruby on Rails, Postgres, MySQL, RSpec, Sidekiq, Capistrano, Ansible, Amazon Web Services (EC2, S3), Docker, Circle-CI, Github, Slack
+          -# Follow the pattern: Principal backend systems/framework, front end frameworks, test suite, DB, deployment platform, CI-system, VCS, other systems
+      .row
+        .col-lg-3.center.workplace-description-box
           =link_to(image_tag('logo-avant-text.png', style: 'width:200px;margin-top:5px;'), 'http://www.avant.com', target: '_blank')
           %h4
             %span.underline Senior Software Engineer
-          %h5 June 2015 - Present
+          %h5 June 2015 - December 2017
           %h5 Chicago, IL
         .col-lg-9.workplace-description-box
           %p
@@ -84,30 +100,8 @@ stylesheet: /stylesheets/resume.css
             %li Developed and added to public domain gems including Production Sampler and Actionizer.
             %li Took charge of project to redesign the accounting system for credit lines product, rectifying all prior accounting issues.
             %li Improved documentation for other developers by creating Wikis on system structure and domain knowledge-heavy workflows.
-          %p Technologies: Ruby on Rails, Postgresql, RSpec, Resque, Heroku, Amazon Web Services (S3), Solano CI, Circle-CI, Github, Hipchat, Pivotal Tracker
+          %p Technologies: Ruby on Rails, Postgres, RSpec, Resque, Heroku, Amazon Web Services (S3), Solano CI, Circle-CI, Github, Hipchat, Pivotal Tracker
           -# Follow the pattern: Principal backend systems/framework, front end frameworks, test suite, DB, deployment platform, CI-system, VCS, other systems
-          -
-      .row
-        .col-lg-3.center.workplace-description-box
-          =link_to(image_tag('logo-finavigator-long.png', style: 'width:200px;margin-top:5px;'), 'http://www.finavigator.com', target: '_blank')
-          %h4
-            %span.underline Senior Software Engineer
-          %h5 September 2016 - April 2017
-          %h5 Remote
-        .col-lg-9.workplace-description-box
-          %p
-            FI Navigator helps financial companies make better strategic decisions through the use of proprietary
-            analytics. As a member of a small team of developers, I was instrumental in helping the company build the
-            technology back-end for new products. In addition to acting as full time developer, this role often required
-            me to use business analyst and devops engineer skills.
-          %ul
-            %li Developed Rails apps that efficiently load and query financial information in multi-terrabyte sized MySQL databases.
-            %li Built API interfaces to extract large data sets on banking and credit union financials from Federal regulatory agencies.
-            %li Maintained and improvised proprietary system for crawling and indexing metadata from bank websites.
-            %li Created automation scripts in Bash and Ansible to provision Ubuntu Linux resources as needed on AWS EC2.
-          %p Technologies: Ruby on Rails, MySQL, RSpec, Sidekiq, Capistrano, Ansible, Amazon Web Services (EC2, S3), Docker, Circle-CI, Github, Slack
-          -# Follow the pattern: Principal backend systems/framework, front end frameworks, test suite, DB, deployment platform, CI-system, VCS, other systems
-          -
       .row
         .col-lg-3.center.workplace-description-box
           =link_to(image_tag('logo-nextgear.png', style: 'width:200px;margin-top:5px;'), 'http://www.nextgearcapital.com', target: '_blank')
@@ -144,7 +138,7 @@ stylesheet: /stylesheets/resume.css
             %li Converted the functional requirements and wireframes created by the product owner and UX designer into a working system.
 
           %p
-            Technologies: Ruby on Rails 3.2, HTML/CSS, Twitter Bootstrap, Javascript, JQuery, Postgresql, Heroku,
+            Technologies: Ruby on Rails 3.2, HTML/CSS, Twitter Bootstrap, Javascript, JQuery, Postgres, Heroku,
             Amazon Web Services (S3), Mandrill, Github
 
       .row
